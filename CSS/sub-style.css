@@ -1,0 +1,331 @@
+/* CSS cleaned, formatted, and commented */
+    /* Cleaned and formatted for final coursework submission */
+    /*Setting the default margin and padding to 0 so that it will be easy to implement them manually*/
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    background-color: #111111;
+    }
+    header {
+    position: sticky;
+    top: 0;
+    background-color: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-family: Georgia, serif;
+    }
+    .logo img {
+    transition:width 0.3s ease, filter 0.3s ease;
+    }
+    .logo img:hover {
+    transform: scale(1.1);
+    }
+    .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between links */
+    background-color: #111111;
+    padding: 35px 20px;
+    font-family: Georgia, serif;
+    }
+    .navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .navbar a:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+    }
+    a {
+    text-decoration: none;
+    color: black;
+    }
+    a:hover {
+    color: gray;
+    }
+    .about-soul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .about-soul-text {
+    padding: 40px 40px;
+    text-align: center;
+    }
+    .about-soul-text h2 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    }
+    .about-soul-text p {
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    color: white ;
+    font-weight: normal;
+    }
+    .mission-vision {
+    background: transparent;
+    color: black; /* or dark gray if needed */
+    text-align: center;
+    padding: 50px 20px;
+    }
+    .mission-vision h2 {
+    font-size: 26px;
+    margin-bottom: 60px;
+    }
+    .card-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    }
+    .card {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    }
+    .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 10px;
+    }
+    .overlay h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color:#ffffff;
+    }
+    .overlay p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color:#ffffff;
+    }
+    .card:hover {
+    transform: scale(1.05);
+    }
+    .about-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 🔧 Reduce height to 60% of screen */
+    overflow: hidden;
+    }
+    .bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    }
+    .members{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: Georgia, serif;
+    color: white ;
+    font-weight: normal;
+    }
+    .about-me {
+    width: 100%;
+    max-width: 1200px;   /* Optional: Control max stretch */
+    padding: 60px;
+    margin: 0 auto;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: left;
+    }
+    .about-me h3 {
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+    }
+    .about-content p {
+    font-size: 30px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    }
+    .about-content ul {
+    font-size: 30px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-left: 30px;
+    }
+    .about-content li {
+    margin-bottom: 16px;
+    }
+    .insta {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+    .insta img {
+    width: 40px;
+    height: 40px;
+    }
+    .insta a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 30px;
+    }
+    .insta a:hover {
+    transform: scale(1.05);
+    }
+    .linkedin {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+    .linkedin img {
+    width: 40px;
+    height: 40px;
+    }
+    .linkedin a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 30px;
+    }
+    .linkedin a:hover {
+    transform: scale(1.05);
+    }
+    .new-arrivals {
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    overflow: hidden;
+    }
+    .new-arrivals-text {
+    position: absolute;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    }
+    .new-arrivals-text h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    }
+    .new-arrivals-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    }
+    .new-arrivals-text button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    }
+    .new-arrivals-text button:hover {
+    background-color: #444;
+    }
+    footer {
+    justify-content: center;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    background-color: #111111;
+    }
+    footer h2{
+    font-size: 25px;
+    margin-bottom: 5px;
+    }
+    footer p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+     #newsletter-popup {
+    display: none; /* Hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    }
+    .popup-content {
+    position: relative;
+    background:linear-gradient(to bottom right, #fc4a1a,#f7b733);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff;
+    width: 500px;
+    height: 250px;
+    }
+    .popup-content h2 {
+    margin-bottom: 10px;
+    }
+    .popup-content p {
+    margin-bottom: 10px;
+    }
+    .popup-content input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    }
+    .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    }
+    .sub-but button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 17px;
+    }
+    .sub-but button:hover{
+    background-color: orange;
+    font-size: large;
+    margin-top: 14.5px;
+    }

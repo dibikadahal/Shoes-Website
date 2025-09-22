@@ -1,0 +1,348 @@
+/* CSS cleaned, formatted, and commented */
+    /* Cleaned and formatted for final coursework submission */
+    /*Setting the default margin and padding to 0 so that it will be easy to implement them manually*/
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    /*Setting what the default property of body should be*/
+    body {
+    font-family: Helvetica, sans-serif;
+    color: #111111;
+    background-color: #ffffff;
+    }
+    /*This will be the property of the header of the website*/
+    header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-family: Georgia, serif;
+    }
+    .logo img {
+    transition:width 0.3s ease, filter 0.3s ease;
+    }
+    .logo img:hover {
+    transform: scale(1.1);
+    }
+    .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between links */
+    background-color:#ffffff;
+    padding: 35px 20px;
+    font-family: Georgia, serif;
+    }
+    .navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*Smooth transition effect*/
+    }
+    .navbar a:hover {
+    transform: scale(1.05); /*It will change its size when hovered over*/
+    text-decoration: none;
+    }
+    a {
+    text-decoration: none;
+    color: black;
+    }
+    a:hover {
+    color: gray;
+    }
+    .new-arrivals {
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    overflow: hidden;
+    }
+    .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    }
+    .new-arrivals-text {
+    position: absolute;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    }
+    .new-arrivals-text h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    }
+    .new-arrivals-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    }
+    .new-arrivals-text button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    }
+    .new-arrivals-text button:hover {
+    background-color: #444;
+    }
+    .product-grid-2x2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 40px;
+    }
+    .product-card {
+    width: calc(50% - 40px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+    .product-card img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+    }
+    .product-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    }
+    .product-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    }
+    .product-card button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    }
+    .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .products h2 {
+    font-family: Georgia, serif;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    }
+    .product-page {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+    .add-bag {
+    background: black;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    }
+    .favorite {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    }
+    .description p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    }
+    .description ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    }
+    .description li {
+    font-size: 14px;
+    margin-bottom: 4px;
+    }
+    .description a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #000;
+    }
+    /* Review Section */
+    .review-section {
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    }
+    .review-section summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    }
+    .review-list p {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-left: 3px solid #000;
+    }
+    .review-form-container {
+    max-width: 500px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    }
+    #review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    }
+    #review-form input {
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    }
+    footer {
+    justify-content: center;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    background-color: #ffffff;
+    }
+    footer h2{
+    font-size: 25px;
+    margin-bottom: 5px;
+    }
+    footer p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+    .sub-but button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 17px;
+    }
+    .sub-but button:hover{
+    background-color: orange;
+    font-size: large;
+    margin-top: 14.5px;
+    }
+    #newsletter-popup {
+    display: none; /* Hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    }
+    .popup-content {
+    position: relative;
+    background:linear-gradient(to bottom right, #fc4a1a,#f7b733);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff;
+    width: 500px;
+    height: 250px;
+    }
+    .popup-content h2 {
+    margin-bottom: 10px;
+    }
+    .popup-content p {
+    margin-bottom: 10px;
+    }
+    .popup-content input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    }
+    .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    }
+    .about-us {
+    width: 100%;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    }
+    .about-image img {
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    }
+    .about-text {
+    flex: 1;
+    max-width: none;
+    }
+    .about-text h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    }
+    .about-text p {
+    font-size: 26px;
+    line-height: 1.6;
+    color: #333;
+    }

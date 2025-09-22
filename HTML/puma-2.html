@@ -1,0 +1,234 @@
+<!-- HTML cleaned, formatted, and internal CSS beautified -->
+<!-- HTML cleaned, formatted, and commented -->
+<!-- Cleaned and formatted for final coursework submission -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Puma-2
+  </title>
+  <link href="../CSS/main-style.css" rel="stylesheet"/>
+  <script src="../JS/products.js">
+  </script>
+  <style>
+   /* Internal CSS cleaned */
+.add-bag:hover{
+    background-color: orange;
+}
+.favorite:hover{
+    color: red;
+    background-color: pink;
+}
+.image-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    border: none;
+    padding: 12px 16px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.image-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+.image-slider {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+.main-image {
+    width: 100%;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.image-btn.left {
+    left: 10px;
+}
+.image-btn.right {
+    right: 10px;
+}
+  </style>
+ </head>
+ <body>
+  <!--Header-->
+  <header>
+   <!--Logo-->
+   <a class="logo" href="index.html">
+    <img alt="Soul" src="../IMAGES-VIDEOS/soul-logo.png" style="height: 150px;"/>
+   </a>
+   <!--Navigation bar to navigate through content in the website-->
+   <nav class="navbar">
+    <a href="products.html">
+     Products
+    </a>
+    <a href="about-us.html">
+     About Us
+    </a>
+    <a href="blog.html">
+     Blog
+    </a>
+    <a href="reference.html">
+     Reference
+    </a>
+    <a href="cart.html">
+     <img alt="Cart" src="../IMAGES-VIDEOS/cart.png" style="height: 20px;"/>
+    </a>
+   </nav>
+  </header>
+  <!--Navigation bar to brouse through the products-->
+  <main>
+   <nav class="navbar" style="justify-content: center; margin-top: 40px;">
+    <a href="nike.html">
+     Nike
+    </a>
+    <a href="adidas.html">
+     Adidas
+    </a>
+    <a href="puma.html">
+     Puma
+    </a>
+    <a href="new-balance.html">
+     New Balance
+    </a>
+    <a href="asics.html">
+     Asics
+    </a>
+   </nav>
+   <!--Products informations-->
+   <div class="product-page">
+    <div class="image-slider">
+     <div class="main-image">
+      <img class="slide active" src="../IMAGES-VIDEOS/infusion.avif"/>
+      <img class="slide" src="../IMAGES-VIDEOS/puma-21.avif"/>
+      <img class="slide" src="../IMAGES-VIDEOS/puma-22.avif"/>
+      <img class="slide" src="../IMAGES-VIDEOS/puma-23.avif"/>
+      <button class="image-btn left" id="prevBtn">
+       &lt;
+      </button>
+      <button class="image-btn right" id="nextBtn">
+       &gt;
+      </button>
+     </div>
+    </div>
+    <div class="product-info">
+     <!--Interactive buttons-->
+     <button class="add-bag" onclick="alert('The item has been added to bag')">
+      Add to Bag
+     </button>
+     <button class="favorite" onclick="alert('The item has been added to favorite')">
+      Favorite ♡
+     </button>
+     <!--Product details including prices and type-->
+     <div class="description">
+      <h2>
+       Puma Inhale Color Shifting
+      </h2>
+      <p>
+       The Inhale Color Shifting revives a bold turn-of-the-millennium silhouette with futuristic flair, merging retro energy with modern innovation. 
+            Designed for impact, it features a sculpted EVA midsole with cushioning tuned for everyday comfort and street-ready stability. 
+            The outsole uses a high-abrasion rubber compound for lasting grip and traction across urban terrain.
+
+            Up top, the Inhale stands out with its dynamic wave-like overlays and a color-shifting upper that changes with the light—giving the shoe a distinct look from every angle.
+            Breathable mesh underlays ensure ventilation, while the reflective accents add function and flair.
+            
+            This eye-catching revival redefines Y2K performance aesthetics with a fearless, fashion-forward twist.
+      </p>
+      <ul>
+       <li>
+        Price: NPR 16500
+       </li>
+      </ul>
+     </div>
+     <!--Review section-->
+     <details class="review-section">
+      <summary>
+       <strong>
+        ▼ Reviews (
+        <span id="review-count">
+         1
+        </span>
+        )
+       </strong>
+      </summary>
+       <div class="review-list" id="existing-reviews">
+       <p>
+        <strong>
+         Dibika D.
+        </strong>
+        <br/>
+        Cool design that changes color—eye-catching and fun.
+       </p>
+      </div>
+     </details>
+     <div class="review-form-container">
+      <h4 style="margin-top: 30px;">
+       Write a Review
+      </h4>
+      <form id="review-form">
+       <input id="username" placeholder="Your name" required="" type="text"/>
+       <textarea id="user-review" placeholder="Your review" required=""></textarea>
+       <div class="sub-but">
+        <button type="submit">
+         Submit Review
+        </button>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+  </main>
+  <hr/>
+  <!--Footer-->
+  <footer>
+   <p>
+    © 2025 SoulFoot — All Rights Reserved
+   </p>
+   <script>
+    var slides = document.getElementsByClassName("slide");
+    var currentIndex = 0;
+  
+    function showSlide(index) {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[index].style.display = "block";
+    }
+  
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    document.getElementById("prevBtn").addEventListener("click", prevImage);
+    document.getElementById("nextBtn").addEventListener("click", nextImage);
+  
+    showSlide(currentIndex);
+   </script>
+  </footer>
+ </body>
+</html>
