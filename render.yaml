@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: soul
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .

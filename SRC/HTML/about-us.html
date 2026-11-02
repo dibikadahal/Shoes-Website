@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   About Us
+  </title>
+  <link href="../CSS/sub-style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <a class="logo" href="index.html">
+    <img alt="Soul" src="../IMAGES-VIDEOS/soulogowhite.png" style="height: 150px;"/>
+   </a>
+   <nav class="navbar">
+    <!--Including a navigation bar which contains different pages and website's logo-->
+    <a href="products.html">
+     Products
+    </a>
+    <a href="about-us.html">
+     About Us
+    </a>
+    <a href="blog.html">
+     Blog
+    </a>
+    <a href="reference.html">
+     Reference
+    </a>
+    <a href="cart.html">
+     <img alt="Cart" src="../IMAGES-VIDEOS/cartwhite.png" style="height: 20px;"/>
+    </a>
+   </nav>
+  </header>
+  <main>
+   <!--Main section of the page which has some information about Soul-->
+   <section class="about-soul">
+    <div class="about-soul-text">
+     <h2>
+      What is Soul ?
+     </h2>
+     <p>
+      Made for movement. Shaped by the street.
+
+                Soul started with one idea: sneakers should feel like you. Not just on your feet — but in your mindset. We grew up watching cracked sidewalks turn into runways, bus stops into stages, and the rhythm of everyday life inspire real style.
+
+                We’re not chasing hype or trends. We’re chasing truth. Every drop is designed for comfort, built for long days, and made to match the grit, pace, and creativity of the people who actually live in their shoes.
+
+                Soul isn’t perfect. It’s personal. It’s loud when you want it to be. Quiet when it needs to be. And always ready to move when you are.
+
+                This isn’t just footwear.
+                It’s how you carry yourself.
+     </p>
+    </div>
+   </section>
+   <!--Whole discription is kept as a section of the page-->
+   <section class="mission-vision">
+    <div class="card-row">
+     <div class="card">
+      <img alt="Our Mission" src="../IMAGES-VIDEOS/steph.jpg"/>
+      <div class="overlay">
+       <h3>
+        OUR MISSION
+       </h3>
+       <p>
+        MAKE YOU BETTER
+       </p>
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Our Vision" src="../IMAGES-VIDEOS/feminism.jpg"/>
+      <div class="overlay">
+       <h3>
+        OUR VISION
+       </h3>
+       <p>
+        PREPARE YOU TO PERFORM
+       </p>
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Our Purpose" src="../IMAGES-VIDEOS/elevate.jpg"/>
+      <div class="overlay">
+       <h3>
+        OUR PURPOSE
+       </h3>
+       <p>
+        TO ELEVATE YOU
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+
+    <form id="newsletter-form">
+    <script src="../JS/main.js">
+    </script>
+    <div id="newsletter-popup">
+    <div class="popup-content">
+     <h2>
+      Subscribe to Our Newsletter
+     </h2>
+     <p>
+      Stay updated with our latest news and offers.
+     </p>
+     <input id="email" placeholder="Enter your email" required="" type="email"/>
+     <div class="sub-but">
+      <button type="submit">
+       Subscribe
+      </button>
+     </div>
+     <span class="close-btn" id="close-btn">
+      ✕
+     </span>
+    </div>
+    </div>
+    </form>
+
+   <h3 class="members">
+    Meet the Members !
+   </h3>
+   <!--This is the page's navigation bar which on click directs to the team member's portfolio-->
+   <nav class="navbar" style="justify-content: center; margin-top: 40px;">
+    <a href="adhish.html">
+     Adhish Bhandari
+    </a>
+    <a href="dibika.html">
+     Dibika Dahal
+    </a>
+    <a href="rujal.html">
+     Rujal Sharma Rajopadhyaya
+    </a>
+    <a href="yuden.html">
+     Yuden Gurung
+    </a>
+   </nav>
+   <section class="new-arrivals">
+    <video autoplay="" class="bg-video" loop="" muted="">
+     <source src="../IMAGES-VIDEOS/bgiimg.mp4"/>
+     Your browser does not support the video tag.
+    </video>
+    <div class="new-arrivals-text">
+     <h1>
+      <strong>
+       NEW ARRIVALS SPRING 2025
+      </strong>
+     </h1>
+     <p>
+      New Season, New Energy.
+     </p>
+     <a href="products.html">
+      <button>
+       Explore Now
+      </button>
+     </a>
+    </div>
+   </section>
+  </main>
+  <!--This is a footer-->
+  <footer>
+   <p>
+    © 2025 SoulFoot — All Rights Reserved
+   </p>
+  </footer>
+  <script>
+    var form = document.getElementById("newsletter-form");
+    var popup = document.getElementById('newsletter-popup');
+    var closeBtn = document.getElementById('close-btn');
+    // Show popup after 3 seconds
+    setTimeout(function () {
+    popup.style.display = 'flex';
+    }, 3000);
+    // Close popup when ✕ clicked
+    closeBtn.addEventListener('click', function () {
+        popup.style.display = 'none';
+        });
+        // Validate and handle form submission
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var email = document.getElementById('email').value.trim();
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('Please enter a valid email.');
+                return;
+            }
+            alert('Thanks for subscribing: ' + email);
+            this.reset();
+            popup.style.display = 'none';
+            });
+            var form = document.getElementById("review-form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                var name = document.getElementById('username').value.trim();
+                var reviewText = document.getElementById('user-review').value.trim();
+                // Validation
+                if (name.length < 3 || reviewText.length < 5) {
+                    alert("Please enter a valid name and review.");
+                    return;
+                }
+                alert("Thanks for the review, " + name + "!");
+                this.reset(); // Clear the form after success
+                });
+  </script>
+ </body>
+</html>

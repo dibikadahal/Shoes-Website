@@ -1,0 +1,268 @@
+<!-- HTML cleaned, formatted, and internal CSS beautified -->
+<!-- HTML cleaned, formatted, and commented -->
+<!-- Cleaned and formatted for final coursework submission -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   New Balance-4
+  </title>
+  <link href="../CSS/main-style.css" rel="stylesheet"/>
+  <style>
+   /* Internal CSS cleaned */
+.add-bag:hover{
+    background-color: orange;
+}
+.favorite:hover{
+    color: red;
+    background-color: pink;
+}
+.image-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    border: none;
+    padding: 12px 16px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.image-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+.image-slider {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+.main-image {
+    width: 100%;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.image-btn.left {
+    left: 10px;
+}
+.image-btn.right {
+    right: 10px;
+}
+.card-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.card {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-section {
+    background: transparent;
+    color: black; /* or dark gray if needed */
+    text-align: center;
+    padding: 50px 20px;
+}
+.section-title {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+  </style>
+ </head>
+ <body>
+  <!--Header-->
+  <header>
+   <!--Logo-->
+   <a class="logo" href="index.html">
+    <img alt="Soul" src="../IMAGES-VIDEOS/soul-logo.png" style="height: 150px;"/>
+   </a>
+   <!--Navigation bar to navigate through the content-->
+   <nav class="navbar">
+    <a href="products.html">
+     Products
+    </a>
+    <a href="about-us.html">
+     About Us
+    </a>
+    <a href="blog.html">
+     Blog
+    </a>
+    <a href="reference.html">
+     Reference
+    </a>
+    <a href="cart.html">
+     <img alt="Cart" src="../IMAGES-VIDEOS/cart.png" style="height: 20px;"/>
+    </a>
+   </nav>
+  </header>
+  <!--Navigation bar to navigate through the products-->
+  <main>
+   <nav class="navbar" style="justify-content: center; margin-top: 40px;">
+    <a href="nike.html">
+     Nike
+    </a>
+    <a href="adidas.html">
+     Adidas
+    </a>
+    <a href="puma.html">
+     Puma
+    </a>
+    <a href="new-balance.html">
+     New Balance
+    </a>
+    <a href="asics.html">
+     Asics
+    </a>
+   </nav>
+   <!--Product details-->
+   <div class="product-page">
+    <div class="image-slider">
+     <div class="main-image">
+      <img class="slide active" src="../IMAGES-VIDEOS/440.webp"/>
+      <img class="slide" src="../IMAGES-VIDEOS/nb-41.webp"/>
+      <img class="slide" src="../IMAGES-VIDEOS/nb-42.webp"/>
+      <img class="slide" src="../IMAGES-VIDEOS/nb-43.webp"/>
+      <button class="image-btn left" id="prevBtn">
+       &lt;
+      </button>
+      <button class="image-btn right" id="nextBtn">
+       &gt;
+      </button>
+     </div>
+    </div>
+    <!--Interactive buttons-->
+    <div class="product-info">
+     <button class="add-bag" onclick="alert('The item has been added to bag')">
+      Add to Bag
+     </button>
+     <button class="favorite" onclick="alert('The item has been added to favorite')">
+      Favorite ♡
+     </button>
+     <!--Item detailed description-->
+     <div class="description">
+      <h2>
+       New Balance Numeric 440 V2 Trail Low
+      </h2>
+      <p>
+       The New Balance Numeric 440 V2 Trail Low is a versatile off-white skate shoe built for both skateboarding and casual trail use. It features a durable suede and mesh upper with the signature blue "N" logo on the side. The shoe includes perforated details for breathability and zigzag stitching for added strength. The gum rubber sole provides reliable grip on various surfaces, while the cushioned midsole ensures comfort during long wear. Small purple accents at the heel add a subtle pop of color to the otherwise neutral design. This model effectively combines skate performance with trail durability in a clean, wearable package.
+       <ul>
+        <li>
+         Shown: OFF-White/Cream
+        </li>
+        <li>
+         Price: NPR 15000
+        </li>
+       </ul>
+      </p>
+     </div>
+     <!--Review section-->
+     <details class="review-section">
+      <summary>
+       <strong>
+         ▼ Reviews (
+        <span id="review-count">
+         1
+        </span>
+        )
+       </strong>
+      </summary>
+      <div class="review-list" id="existing-reviews">
+       <p>
+         <strong>
+         Yuden G.
+        </strong>
+        <br/>
+        perfect shoes for both style and sports
+       </p>
+      </div>
+     </details>
+     <div class="review-form-container">
+      <h4 style="margin-top: 30px;">
+       Write a Review
+      </h4>
+      <form id="review-form">
+       <input id="username" placeholder="Your name" required="" type="text"/>
+       <textarea id="user-review" placeholder="Your review" required=""></textarea>
+       <div class="sub-but">
+        <button id="submit-review" type="submit">
+         Submit Review
+        </button>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+  </main>
+  <!--Footer-->
+  <footer>
+   <p>
+    © 2025 SoulFoot — All Rights Reserved
+   </p>
+  </footer>
+  <script src="../JS/main.js">
+  </script>
+  <script>
+   var slides = document.getElementsByClassName("slide");
+  var currentIndex = 0;
+
+  function showSlide(index) {
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[index].style.display = "block";
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  document.getElementById("prevBtn").addEventListener("click", prevImage);
+  document.getElementById("nextBtn").addEventListener("click", nextImage);
+
+  showSlide(currentIndex);
+  </script>
+ </body>
+</html>
